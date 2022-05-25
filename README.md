@@ -1,12 +1,12 @@
 # Java Ransomware PoC
 
-The following is a PoC Ransomware software with a basic GUI display set to recover your encrypted files based on a static 128-bit encryption/decryption key.
+The following is a Java-based PoC Ransomware software with a basic GUI (Java Swing) set to recover your encrypted files based on a static 128-bit encryption/decryption key. This demo program uses a simple SKC approach, which stands for `Secret Key Cryptography`. Basically, this type of encryption uses a single key for encryption/decryption processes, this is also defined as `symmetric encryption`.
 
-This type of program uses a simple SKC approach, this stands for `Secret Key Cryptography`. Basically, in a few words, this encryption process uses a single key for encryption/decryption processes, this is also defined as symmetric encryption.
+For this particular approach, in order to recover from professional/production scenarios, the recovery key should be inside the ransomware, this makes this type of attack easy to mitigate.
 
-For this particular approach, in order to recover from professional/production scenarios, the keys should be inside the ransomware, and for that reason, this type of attack can be easy to mitigate
+The `CriticalPathList.add(System.getProperty("user.home") + "/ransomware-test");` instruction sets the expected directory for sandboxing ransom files. Each process with append a `.encrypted` and `.decrypted` file format as long as the process is goes through. The `CryptoUtils.java` class is the responsible for handling the encrypt and decrypt logic.
 
-This PoC was tested on a Windows environment.
+This PoC was tested on a Windows environment only.
 
 ## Apache Common IO Library
 
